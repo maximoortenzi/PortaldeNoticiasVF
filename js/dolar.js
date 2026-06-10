@@ -26,3 +26,29 @@ async function obtenerDolar() {
     }
 
 }
+
+document.addEventListener("click", function (e) {
+
+    const input = document.getElementById("montoInput");
+    const resultado = document.getElementById("resultadoConversion");
+
+    if (!input) return;
+
+    const monto = Number(input.value);
+
+    if (monto <= 0) {
+        resultado.textContent = "Ingrese un monto válido.";
+        return;
+    }
+
+    if (e.target.id === "usdToArsBtn") {
+        const pesos = monto * valorDolar;
+        resultado.textContent = `${monto} USD = $${pesos.toLocaleString("es-AR")} ARS`;
+    }
+
+    if (e.target.id === "arsToUsdBtn") {
+        const dolares = monto / valorDolar;
+        resultado.textContent = `$${monto.toLocaleString("es-AR")} ARS = ${dolares.toFixed(2)} USD`;
+    }
+
+});
