@@ -204,3 +204,30 @@ form button{
 form button:hover{
     background:#1d4ed8;
 }
+
+/* DARK MODE */
+
+.dark{
+    background:#121212;
+    color:white;
+}
+
+.dark #dolar,
+.dark #conversor,
+.dark .card,
+.dark form,
+.dark .login-container{
+    background:#1f1f1f;
+    color:white;
+}
+
+.dark input,
+.dark textarea{
+    background:#2a2a2a;
+    color:white;
+    border:1px solid #555;
+}
+
+.dark header{
+    background:#111827;
+}
