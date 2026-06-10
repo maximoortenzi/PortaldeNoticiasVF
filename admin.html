@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Administración</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<h1>Administración de Noticias</h1>
+
+<button id="logoutBtn">
+    Cerrar sesión
+</button>
+
+<a href="index.html">Volver al portal</a>
+
+<form id="newsForm">
+
+    <input
+        type="text"
+        id="titulo"
+        placeholder="Título"
+        required
+    >
+
+    <textarea
+        id="descripcion"
+        placeholder="Descripción"
+        required
+    ></textarea>
+
+    <input
+        type="text"
+        id="imagen"
+        placeholder="URL Imagen"
+        required
+    >
+
+    <button type="submit">
+        Guardar noticia
+    </button>
+
+</form>
+
+<div id="listaNoticias"></div>
+
+<script src="js/noticias.js"></script>
+<script src="js/admin.js"></script>
+
+</body>
+</html>
