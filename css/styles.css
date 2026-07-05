@@ -205,6 +205,31 @@ form button:hover{
     background:#1d4ed8;
 }
 
+/* ADMIN */
+
+#logoutBtn,
+.admin-link{
+    display:inline-block;
+    margin:20px 0 0 20px;
+    padding:10px 15px;
+    border:none;
+    border-radius:8px;
+    background:#dc2626;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+#logoutBtn:hover,
+.admin-link:hover{
+    opacity:0.9;
+}
+
+.admin-link{
+    background:#1e3a8a;
+}
+
 /* DARK MODE */
 
 .dark{

@@ -14,6 +14,13 @@ function agregarNoticia(e){
     const descripcion = document.getElementById("descripcion").value;
     const imagen = document.getElementById("imagen").value;
 
+    try{
+        new URL(imagen);
+    }catch{
+        alert("La URL de la imagen no es válida");
+        return;
+    }
+
     const noticias = obtenerNoticias();
 
     noticias.push({ titulo, descripcion, imagen });
@@ -38,8 +45,8 @@ function mostrarNoticiasAdmin(){
             <img src="${noticia.imagen}">
             <h3>${noticia.titulo}</h3>
             <p>${noticia.descripcion}</p>
-            <button onclick="eliminarNoticia(${index})">Eliminar</button>
             <button onclick="editarNoticia(${index})">Editar</button>
+            <button onclick="eliminarNoticia(${index})">Eliminar</button>
         </div>
         `;
 

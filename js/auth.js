@@ -1,3 +1,7 @@
+if(sessionStorage.getItem("admin")){
+    window.location.href = "admin.html";
+}
+
 document
     .getElementById("loginForm")
     .addEventListener("submit", login);
