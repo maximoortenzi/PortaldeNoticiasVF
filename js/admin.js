@@ -49,7 +49,7 @@ function mostrarNoticiasAdmin(){
             <button onclick="eliminarNoticia(${index})">Eliminar</button>
         </div>
         `;
-
+ 
     });
 
 }
