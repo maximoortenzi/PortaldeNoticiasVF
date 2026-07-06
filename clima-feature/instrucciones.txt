@@ -1,0 +1,42 @@
+=== AGREGAR CLIMA AL PORTAL ===
+
+1. Copia clima.js a la carpeta js/
+
+2. En index.html agrega esto ANTES del <section id="noticias">:
+
+<section id="clima">
+    <h2>Clima en Rosario</h2>
+    <div id="climaInfo">Cargando...</div>
+</section>
+
+3. En index.html agrega el script ANTES de app.js:
+
+<script src="js/clima.js"></script>
+
+4. En styles.css agrega:
+
+#clima{
+    width:90%;
+    margin:20px auto;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+#clima h2{
+    margin-bottom:15px;
+}
+
+#clima p{
+    margin-bottom:5px;
+}
+
+5. Para dark mode busca en styles.css la línea:
+.dark #dolar,
+
+y agregale #clima, para que quede:
+
+.dark #dolar,
+.dark #conversor,
+.dark #clima,
