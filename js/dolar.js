@@ -1,29 +1,26 @@
 let valorDolar = 0;
 
-async function obtenerDolar() {
+function obtenerDolar() {
 
-    try {
+    fetch("https://api.bluelytics.com.ar/v2/latest")
+        .then(respuesta => respuesta.json())
+        .then(data => {
 
-        const respuesta = await fetch(
-            "https://api.bluelytics.com.ar/v2/latest"
-        );
+            valorDolar = data.blue.value_sell;
 
-        const data = await respuesta.json();
+            document.getElementById("dolar").innerHTML = `
+                <h2>Dólar Blue</h2>
+                <p>Compra: $${data.blue.value_buy}</p>
+                <p>Venta: $${data.blue.value_sell}</p>
+            `;
 
-        valorDolar = data.blue.value_sell;
+        })
+        .catch(error => {
 
-        document.getElementById("dolar").innerHTML = `
-            <h2>Dólar Blue</h2>
-            <p>Compra: $${data.blue.value_buy}</p>
-            <p>Venta: $${data.blue.value_sell}</p>
-        `;
+            document.getElementById("dolar").innerHTML =
+                "<p>Error al obtener cotización.</p>";
 
-    } catch (error) {
-
-        document.getElementById("dolar").innerHTML =
-            "<p>Error al obtener cotización.</p>";
-
-    }
+        });
 
 }
 

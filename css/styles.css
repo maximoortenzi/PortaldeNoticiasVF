@@ -99,6 +99,38 @@ header button:hover{
     font-weight:bold;
 }
 
+/* CLIMA */
+
+#clima{
+    width:90%;
+    margin:20px auto;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+#clima h2{
+    margin-bottom:15px;
+}
+
+#clima p{
+    margin-bottom:5px;
+}
+
+.card-clima{
+    flex:1;
+    min-width:100px;
+    text-align:center;
+    background:#f0f4ff;
+    padding:10px;
+    border-radius:8px;
+}
+
+.dark .card-clima{
+    background:#2a2a2a;
+}
+
 /* NOTICIAS */
 
 #noticias,
@@ -247,6 +279,12 @@ form button:hover{
     color:white;
 }
 
+.dark #clima input{
+    background:#2a2a2a;
+    color:white;
+    border:1px solid #555;
+}
+
 .dark input,
 .dark textarea{
     background:#2a2a2a;
@@ -286,20 +324,4 @@ form button:hover{
         margin-bottom:10px;
     }
 
-}
-#clima{
-    width:90%;
-    margin:20px auto;
-    background:white;
-    padding:20px;
-    border-radius:12px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
-
-#clima h2{
-    margin-bottom:15px;
-}
-
-#clima p{
-    margin-bottom:5px;
 }

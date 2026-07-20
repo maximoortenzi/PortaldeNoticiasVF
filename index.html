@@ -47,8 +47,12 @@
 
     </section>
     <section id="clima">
-        <h2>Clima en Rosario</h2>
+        <h2>Clima: <span id="ciudadNombre">Rosario</span></h2>
         <div id="climaInfo">Cargando...</div>
+        <div style="margin-top:15px;display:flex;gap:10px;">
+            <input type="text" id="inputCiudad" placeholder="Cambiar ciudad..." style="flex:1;padding:8px;border:1px solid #ccc;border-radius:8px;">
+            <button id="btnCambiarCiudad" style="padding:8px 15px;border:none;border-radius:8px;background:#2563eb;color:white;cursor:pointer;">Buscar</button>
+        </div>
     </section>
 
     <section id="noticias"></section>
